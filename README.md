@@ -85,7 +85,7 @@ that will receive the manifest - it would be good to agree on a standardised lis
 The `input` and `output` blocks are arrays of these descriptors - if you only have one file, it still needs to be an array of length one.
 
 
-This example input block describes two files: A VCF file of mutations, and a tab-separated text file of methylation values.
+This example input block describes two files: A VCF file of mutations, and a CSV file of methylation values.
 ```
   "input": [
     {
