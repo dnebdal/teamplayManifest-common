@@ -82,6 +82,18 @@ Every single field of [Attachment](https://www.hl7.org/fhir/datatypes.html#Attac
 It's obviously important which values are allowed in these fields. In practice this is up to whoever wrote the container 
 that will receive the manifest - it would be good to agree on a standardised list.
 
+For the MIME types, try to stick with something from the official [registry](https://www.iana.org/assignments/media-types/media-types.xhtml).
+At a guess, these ones will cover most uses:
+```
+application/pdf             PDF
+application/octet-stream    Any binary format without a more specific type, e.g. BAM, RDS
+image/jpeg                  JPG/JPEG
+image/png                   PNG
+image/tiff                  TIFF
+text/csv                    CSV (comma-separated; do not use semicolon-separated)
+text/plain                  Any unstructured text, like FASTQ
+text/tab-separated-values   Any tab-separated text file, including VCF
+
 The `input` and `output` blocks are arrays of these descriptors - if you only have one file, it still needs to be an array of length one.
 
 
