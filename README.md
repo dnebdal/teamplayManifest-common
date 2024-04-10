@@ -43,7 +43,7 @@ Some fields must always be included:
 - `for.reference` is the name of the zip file
 - `encounter.reference` is the time point the sample was collected at, as free text
 - `requestedPerformer` must be an array, but we only use the first element
-- `requestedPerformer[0].reference.reference` is the identifier for the container/analysis to run
+    - `requestedPerformer[0].reference.reference` is the identifier for the container/analysis to run
 
 This example is a manifest for a sample called "OUS_Patient1", gathered at "Start of Treatment", to be analysed on "OUS-0001",
 and packed into zip file `OUS_Patient1.Start_of_treatment.OUS-0001.1710166715.zip`.
