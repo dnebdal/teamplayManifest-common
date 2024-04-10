@@ -48,7 +48,7 @@ Some fields must always be included:
 This example is a manifest for a sample called "OUS_Patient1", gathered at "Start of Treatment", to be analysed on "OUS-0001",
 and packed into zip file `OUS_Patient1.Start_of_treatment.OUS-0001.1710166715.zip`.
 
-```         
+```
 {
   "resourceType": "Task",
   "text": {
@@ -93,9 +93,9 @@ image/tiff                  TIFF
 text/csv                    CSV (comma-separated; do not use semicolon-separated)
 text/plain                  Any unstructured text, like FASTQ
 text/tab-separated-values   Any tab-separated text file, including VCF
+```
 
 The `input` and `output` blocks are arrays of these descriptors - if you only have one file, it still needs to be an array of length one.
-
 
 This example input block describes two files: A VCF file of mutations, and a CSV file of methylation values.
 ```
