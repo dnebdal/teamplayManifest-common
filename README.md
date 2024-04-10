@@ -192,7 +192,7 @@ Here is a complete output manifest, matching the input manifest above:
 ```
 
 # Zip file
-The zip files created by the Python and R tools have a specific layout:
+The names of the zip files created by the Python and R tools have a specific layout:
 `[NEW|OUT].sampleID.encounter.containerID.timestamp.zip`
 Thus, `NEW.OUS-Patient-0001.EOT.OUS0001.1712753272.zip` is a file 
 - Uploaded to teamplay: `NEW`
