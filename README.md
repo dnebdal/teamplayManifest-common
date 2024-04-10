@@ -75,12 +75,14 @@ a container inside teamPlay packaging your results (`output`). I suggest leaving
 in the manifest, as a record of which files were used.
 
 Every single field of [Attachment](https://www.hl7.org/fhir/datatypes.html#Attachment) is optional. We use three:
-`type.text` describes what kind of data is in the file - which omic, in effect.
-`valueAttachment.contentType` is the [MIME type](https://en.wikipedia.org/wiki/Media_type), it describes the *format*. 
-`valueAttachment.url` is the file name. Since this is an URL, it needs a protocol; use "`file://`".
+- `type.text` describes what kind of data is in the file - which omic, in effect.
+- `valueAttachment.contentType` is the [MIME type](https://en.wikipedia.org/wiki/Media_type), it describes the *format*. 
+- `valueAttachment.url` is the file name. Since this is an URL, it needs a protocol; use "`file://`".
 
 It's obviously important which values are allowed in these fields. In practice this is up to whoever wrote the container 
 that will receive the manifest - it would be good to agree on a standardised list.
+
+The `input` and `output` blocks are arrays of these descriptors - if you only have one file, it still needs to be an array of length one.
 
 
 This example input block describes two files: A VCF file of mutations, and a tab-separated text file of methylation values.
