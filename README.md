@@ -204,3 +204,13 @@ Thus, `NEW.OUS-Patient-0001.EOT.OUS0001.1712753272.zip` is a file
 - Created at UNIX timestamp `1712753272` (2024-04-10 12:47:52 GMT)
 
 If everything goes well, the results should appear in a file called something like `RES.OUS-Patient-0001.EOT.OUS0001.1712753400.zip` some time later.
+
+# Other tools
+## jq
+While the R and Python packages should cover most uses, it is also possible to work with the manifest files with any JSON aware tool.
+For instance, [jq](https://jqlang.github.io/jq/) makes it reasonably easy to query JSON files from the command line. To extract the requestedPerformer from a manifest, this works fine:
+
+`jq '.requestedPerformer[0].reference.reference' MANIFEST.json`
+
+# HL7 validator
+The HL7 organisation maintains a [command line validator](https://github.com/hapifhir/org.hl7.fhir.core), in addition to the web version. It can be downloaded directly from [here](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar) (Java JAR file), and run with `java -jar validator_cli.jar MANIFEST.json`.
