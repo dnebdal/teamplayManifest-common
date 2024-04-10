@@ -194,7 +194,7 @@ Here is a complete output manifest, matching the input manifest above:
 # Zip file
 The names of the zip files created by the Python and R tools have a specific layout:
 
-`[NEW|OUT].sampleID.encounter.containerID.timestamp.zip`
+`[NEW|RES].sampleID.encounter.containerID.timestamp.zip`
 
 Thus, `NEW.OUS-Patient-0001.EOT.OUS0001.1712753272.zip` is a file 
 - Uploaded to teamplay: `NEW`
@@ -203,4 +203,4 @@ Thus, `NEW.OUS-Patient-0001.EOT.OUS0001.1712753272.zip` is a file
 - To be analyzed in container `OUS0001`
 - Created at UNIX timestamp `1712753272` (2024-04-10 12:47:52 GMT)
 
-If everything goes well, the results should appear in a file called something like `OUT.OUS-Patient-0001.EOT.OUS0001.1712753400.zip` some time later.
+If everything goes well, the results should appear in a file called something like `RES.OUS-Patient-0001.EOT.OUS0001.1712753400.zip` some time later.
