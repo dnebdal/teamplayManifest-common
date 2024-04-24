@@ -45,8 +45,8 @@ Some fields must always be included:
 - `requestedPerformer` must be an array, but we only use the first element
     - `requestedPerformer[0].reference.reference` is the identifier for the container/analysis to run
 
-This example is a manifest for a sample called "OUS_Patient1", gathered at "Start of Treatment", to be analysed on "OUS-0001",
-and packed into zip file `OUS_Patient1.Start_of_treatment.OUS-0001.1710166715.zip`.
+This example is a manifest for a sample called "OUS_Patient1", gathered at "Start of Treatment", to be analysed on "OUS-OMICS-PANC",
+and packed into zip file `OUS_Patient1.Start_of_treatment.OUS-OMICS-PANC.1710166715.zip`.
 
 ```
 {
@@ -59,10 +59,10 @@ and packed into zip file `OUS_Patient1.Start_of_treatment.OUS-0001.1710166715.zi
   "intent": "order",
   "authoredOn": "2024-02-28T13:45:37+01:00",
   "focus":{"reference":"OUS_Patient1"},
-  "for":{"reference":"OUS_Patient1.Start_of_treatment.OUS-0001.1710166715.zip"},
+  "for":{"reference":"OUS_Patient1.Start_of_treatment.OUS-OMICS-PANC.1710166715.zip"},
   "encounter":{"reference":"Start of treatment"},
   "requestedPerformer" : [{
-      "reference":{"reference":"OUS-0001"}
+      "reference":{"reference":"OUS-OMICS-PANC"}
     }]
 }
 ```
@@ -143,10 +143,10 @@ Here is a complete output manifest, matching the input manifest above:
   "authoredOn": "2024-02-28T13:45:37+01:00",
   "lastModified": "2024-02-28T14:00:10+01:00",
   "focus":{"reference":"OUS_Patient1"},
-  "for":{"reference":"OUTPUT.OUS_Patient1.Start_of_treatment.OUS-0001.1710167000.zip"},
+  "for":{"reference":"OUTPUT.OUS_Patient1.Start_of_treatment.OUS-OMICS-PANC.1710167000.zip"},
   "encounter":{"reference":"Start of treatment"},
   "requestedPerformer" : [{
-      "reference":{"reference":"OUS-0001"}
+      "reference":{"reference":"OUS-OMICS-PANC"}
     }],
      "input": [
     {
@@ -196,11 +196,11 @@ The names of the zip files created by the Python and R tools have a specific lay
 
 `[NEW|RES].sampleID.encounter.containerID.timestamp.zip`
 
-Thus, `NEW.OUS-Patient-0001.EOT.OUS0001.1712753272.zip` is a file 
+Thus, `NEW.OUS-Patient-0001.EOT.OUS-OMICS-PANC.1712753272.zip` is a file 
 - Uploaded to teamplay: `NEW`
 - For sample `OUS-Patient-0001`
 - Taken at timepoint `EOT`
-- To be analyzed in container `OUS0001`
+- To be analyzed in container `OUS-OMICS-PANC`
 - Created at UNIX timestamp `1712753272` (2024-04-10 12:47:52 GMT)
 
 If everything goes well, the results should appear in a file called something like `RES.OUS-Patient-0001.EOT.OUS0001.1712753400.zip` some time later.
