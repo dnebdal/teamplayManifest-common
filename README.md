@@ -85,6 +85,7 @@ that will receive the manifest - it would be good to agree on a standardised lis
 For the MIME types, try to stick with something from the official [registry](https://www.iana.org/assignments/media-types/media-types.xhtml).
 At a guess, these ones will cover most uses:
 ```
+application/dicom           DICOM dcm file
 application/pdf             PDF
 application/octet-stream    Any binary format without a more specific type, e.g. BAM, RDS
 image/jpeg                  JPG/JPEG
