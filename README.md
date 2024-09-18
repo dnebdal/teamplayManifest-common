@@ -121,6 +121,26 @@ This example input block describes two files: A VCF file of mutations, and a CSV
     }
   ]
 ```
+## DICOM reference
+Instead of an input file, the input can come from a DICOM node. To reference this, store a text ID in a valueReference, with the exact type text from the example 
+(it's a reference to the [SNOMED](https://browser.ihtsdotools.org/?perspective=full&conceptId1=1119411007&edition=MAIN/2024-08-01&release=&languages=en) definition).
+```
+"input": [
+    {
+      "type": {
+        "text": "Digital Imaging and Communications in Medicine module (core metadata concept)"
+      },
+      "valueReference": {
+        "identifier": {
+          "value": "imaging_study_uid_1"
+        }
+      }
+    }
+  ]
+
+```
+
+
 ## Output-specific fields
 
 To convert a manifest from "a task to be run" to "a description of results" only takes a few changes.
